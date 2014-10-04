@@ -1,0 +1,12 @@
+{
+	"title": "UI Coverage",
+
+	"description": "Website for testing HTML components are fully styled.",
+	"author": "IL7 / Evan Krambuhl",
+
+	"icon": "",
+	"apple-icon": "",
+
+	"scripts": [],
+	"stylesheets": ["styles/style"]
+}
