@@ -1,5 +1,6 @@
 module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-iconizr');
+    grunt.loadNpmTasks('grunt-update-json');
     grunt.loadNpmTasks('assemble');
 
     // Project configuration.
@@ -34,6 +35,19 @@ module.exports = function(grunt) {
                 cwd: 'source/templates/pages',
                 src: ['**/*.{hbs,handlebars}'],
                 dest: 'dist/'
+            }
+        },
+        
+        update_json: {
+            sync: {
+                src: 'package.json',
+                dest: 'bower.json',
+                fields: [
+                    'name',
+                    'author',
+                    'version',
+                    'repository'
+                ]
             }
         }
     });

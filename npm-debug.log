@@ -1,0 +1,146 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', '-g', 'markmon' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.32
+4 verbose cache add [ 'markmon', null ]
+5 verbose cache add name=undefined spec="markmon" args=["markmon",null]
+6 verbose parsed url { protocol: null,
+6 verbose parsed url   slashes: null,
+6 verbose parsed url   auth: null,
+6 verbose parsed url   host: null,
+6 verbose parsed url   port: null,
+6 verbose parsed url   hostname: null,
+6 verbose parsed url   hash: null,
+6 verbose parsed url   search: null,
+6 verbose parsed url   query: null,
+6 verbose parsed url   pathname: 'markmon',
+6 verbose parsed url   path: 'markmon',
+6 verbose parsed url   href: 'markmon' }
+7 silly lockFile e0a2fede-markmon markmon
+8 verbose lock markmon /Users/evan/.npm/e0a2fede-markmon.lock
+9 silly lockFile e0a2fede-markmon markmon
+10 silly lockFile e0a2fede-markmon markmon
+11 verbose addNamed [ 'markmon', '' ]
+12 verbose addNamed [ null, '*' ]
+13 silly lockFile b3a77eb5-markmon markmon@
+14 verbose lock markmon@ /Users/evan/.npm/b3a77eb5-markmon.lock
+15 silly addNameRange { name: 'markmon', range: '*', hasData: false }
+16 verbose request where is /markmon
+17 verbose request registry https://registry.npmjs.org/
+18 verbose request id 8224426c7e7ea24c
+19 verbose url raw /markmon
+20 verbose url resolving [ 'https://registry.npmjs.org/', './markmon' ]
+21 verbose url resolved https://registry.npmjs.org/markmon
+22 verbose request where is https://registry.npmjs.org/markmon
+23 info trying registry request attempt 1 at 03:30:56
+24 http GET https://registry.npmjs.org/markmon
+25 http 200 https://registry.npmjs.org/markmon
+26 silly registry.get cb [ 200,
+26 silly registry.get   { date: 'Sat, 04 Oct 2014 10:30:56 GMT',
+26 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+26 silly registry.get     etag: '"1UB8OFUHTCCJOH8OVAFEN2FJM"',
+26 silly registry.get     'content-type': 'application/json',
+26 silly registry.get     'cache-control': 'max-age=60',
+26 silly registry.get     'content-length': '11787',
+26 silly registry.get     'accept-ranges': 'bytes',
+26 silly registry.get     via: '1.1 varnish',
+26 silly registry.get     age: '0',
+26 silly registry.get     'x-served-by': 'cache-sjc3130-SJC',
+26 silly registry.get     'x-cache': 'MISS',
+26 silly registry.get     'x-cache-hits': '0',
+26 silly registry.get     'x-timer': 'S1412418656.798283,VS0,VE87',
+26 silly registry.get     vary: 'Accept',
+26 silly registry.get     'keep-alive': 'timeout=10, max=50',
+26 silly registry.get     connection: 'Keep-Alive' } ]
+27 silly addNameRange number 2 { name: 'markmon', range: '*', hasData: true }
+28 silly addNameRange versions [ 'markmon',
+28 silly addNameRange   [ '0.0.1', '0.0.2', '0.0.3', '0.0.4', '0.0.5', '0.0.6', '0.0.7' ] ]
+29 verbose addNamed [ 'markmon', '0.0.7' ]
+30 verbose addNamed [ '0.0.7', '0.0.7' ]
+31 silly lockFile 9644576e-markmon-0-0-7 markmon@0.0.7
+32 verbose lock markmon@0.0.7 /Users/evan/.npm/9644576e-markmon-0-0-7.lock
+33 silly lockFile 81dc5098-js-org-markmon-markmon-0-0-7-tgz https://registry.npmjs.org/markmon/-/markmon-0.0.7.tgz
+34 verbose lock https://registry.npmjs.org/markmon/-/markmon-0.0.7.tgz /Users/evan/.npm/81dc5098-js-org-markmon-markmon-0-0-7-tgz.lock
+35 verbose addRemoteTarball [ 'https://registry.npmjs.org/markmon/-/markmon-0.0.7.tgz',
+35 verbose addRemoteTarball   'ec1a0f7977ca410b00a8c5e6ca9681ccf61854e9' ]
+36 info retry fetch attempt 1 at 03:30:56
+37 verbose fetch to= /var/folders/mw/bk301rdj781bmh3sfpkjvgb00000gn/T/npm-6421-hdisDPGD/registry.npmjs.org/markmon/-/markmon-0.0.7.tgz
+38 http GET https://registry.npmjs.org/markmon/-/markmon-0.0.7.tgz
+39 http 200 https://registry.npmjs.org/markmon/-/markmon-0.0.7.tgz
+40 silly lockFile 81dc5098-js-org-markmon-markmon-0-0-7-tgz https://registry.npmjs.org/markmon/-/markmon-0.0.7.tgz
+41 silly lockFile 81dc5098-js-org-markmon-markmon-0-0-7-tgz https://registry.npmjs.org/markmon/-/markmon-0.0.7.tgz
+42 silly lockFile 9644576e-markmon-0-0-7 markmon@0.0.7
+43 silly lockFile 9644576e-markmon-0-0-7 markmon@0.0.7
+44 silly lockFile b3a77eb5-markmon markmon@
+45 silly lockFile b3a77eb5-markmon markmon@
+46 silly resolved [ { name: 'markmon',
+46 silly resolved     description: 'A Markdown live previewer with fast Mathjax re-rendering',
+46 silly resolved     version: '0.0.7',
+46 silly resolved     license: 'MIT',
+46 silly resolved     author:
+46 silly resolved      { name: 'Yao Yujian',
+46 silly resolved        email: 'yyjhao@gmail.com',
+46 silly resolved        url: 'http://yjyao.com' },
+46 silly resolved     dependencies:
+46 silly resolved      { express: '3.x',
+46 silly resolved        'socket.io': '0.9.x',
+46 silly resolved        optimist: '0.6.x',
+46 silly resolved        chokidar: '0.8.x',
+46 silly resolved        mime: '1.2.x' },
+46 silly resolved     files: [ 'bin', 'lib', 'frontend' ],
+46 silly resolved     bin: { markmon: 'bin/markmon' },
+46 silly resolved     main: 'lib/Server.js',
+46 silly resolved     preferGlobal: true,
+46 silly resolved     repository: { type: 'git', url: 'git://github.com/yyjhao/markmon.git' },
+46 silly resolved     keywords: [ 'markdown', 'previewer' ],
+46 silly resolved     bugs: { url: 'https://github.com/yyjhao/markmon/issues' },
+46 silly resolved     directories: { bin: 'bin', lib: 'lib' },
+46 silly resolved     homepage: 'https://github.com/yyjhao/markmon',
+46 silly resolved     _id: 'markmon@0.0.7',
+46 silly resolved     dist:
+46 silly resolved      { shasum: 'ec1a0f7977ca410b00a8c5e6ca9681ccf61854e9',
+46 silly resolved        tarball: 'http://registry.npmjs.org/markmon/-/markmon-0.0.7.tgz' },
+46 silly resolved     _from: 'markmon@',
+46 silly resolved     _npmVersion: '1.4.3',
+46 silly resolved     _npmUser: { name: 'yyjhao', email: 'yyjhao@gmail.com' },
+46 silly resolved     maintainers: [ [Object] ],
+46 silly resolved     _shasum: 'ec1a0f7977ca410b00a8c5e6ca9681ccf61854e9',
+46 silly resolved     _resolved: 'https://registry.npmjs.org/markmon/-/markmon-0.0.7.tgz' } ]
+47 info install markmon@0.0.7 into /usr/local/lib
+48 info installOne markmon@0.0.7
+49 verbose lib/node_modules/markmon unbuild
+50 verbose tar unpack /Users/evan/.npm/markmon/0.0.7/package.tgz
+51 silly lockFile bcc15a1f-r-local-lib-node-modules-markmon tar:///usr/local/lib/node_modules/markmon
+52 verbose lock tar:///usr/local/lib/node_modules/markmon /Users/evan/.npm/bcc15a1f-r-local-lib-node-modules-markmon.lock
+53 silly lockFile cc8d8298-an-npm-markmon-0-0-7-package-tgz tar:///Users/evan/.npm/markmon/0.0.7/package.tgz
+54 verbose lock tar:///Users/evan/.npm/markmon/0.0.7/package.tgz /Users/evan/.npm/cc8d8298-an-npm-markmon-0-0-7-package-tgz.lock
+55 silly gunzTarPerm modes [ '755', '644' ]
+56 error Error: EACCES, mkdir '/usr/local/lib/node_modules/markmon'
+56 error  { [Error: EACCES, mkdir '/usr/local/lib/node_modules/markmon']
+56 error   errno: 3,
+56 error   code: 'EACCES',
+56 error   path: '/usr/local/lib/node_modules/markmon',
+56 error   fstream_type: 'Directory',
+56 error   fstream_path: '/usr/local/lib/node_modules/markmon',
+56 error   fstream_class: 'DirWriter',
+56 error   fstream_stack:
+56 error    [ '/usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23',
+56 error      '/usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53',
+56 error      'Object.oncomplete (fs.js:107:15)' ] }
+57 error Please try running this command again as root/Administrator.
+58 error System Darwin 14.0.0
+59 error command "node" "/usr/local/bin/npm" "install" "-g" "markmon"
+60 error cwd /Users/evan/Sites/il7/github/ui-coverage
+61 error node -v v0.10.32
+62 error npm -v 1.4.28
+63 error path /usr/local/lib/node_modules/markmon
+64 error fstream_path /usr/local/lib/node_modules/markmon
+65 error fstream_type Directory
+66 error fstream_class DirWriter
+67 error code EACCES
+68 error errno 3
+69 error stack Error: EACCES, mkdir '/usr/local/lib/node_modules/markmon'
+70 error fstream_stack /usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23
+70 error fstream_stack /usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53
+70 error fstream_stack Object.oncomplete (fs.js:107:15)
+71 verbose exit [ 3, true ]

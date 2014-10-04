@@ -19,9 +19,12 @@ var livereload = require('gulp-livereload');
 
 // build / dist
 var clean = require('gulp-clean');
+var fileinclude = require('gulp-file-include');
 
-// image/svg tasks
-var imagemin = require('gulp-imagemin');
+// js tasks
+var bowerFiles  = require('bower-files')();
+var uglify = require('gulp-uglify');
+var concat = require('gulp-concat');
 
 // css tasks
 var sass = require('gulp-sass');
@@ -95,6 +98,42 @@ gulp.task('styles', function() {
 });
 
 
+// Task `app`
+// compiles app script and optimises file
+// > input `app/app.js`
+//  - fileinclude
+//  ==> output `app.js` w/ sourcemaps
+//  - uglify
+//  ==> output `app.min.js
+gulp.task('app', function() {
+  return gulp.src(path.join(dir.src, 'app/app.js'))
+    .pipe(sourcemaps.init())
+    .pipe(fileinclude('//=')) //=include('url.js')
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest(dir.scripts))
+    .pipe(uglify())
+    .pipe(rename('app.min.js'))
+    .pipe(gulp.dest(dir.scripts));
+});
+
+
+// Task `lib`
+// combines bower scripts and optimises file
+// > input bowerFiles.js
+//  - concat
+//  ==> output `lib.js`
+//  - uglify
+//  ==> output `lib.min.js
+gulp.task('lib', function() {
+  return gulp.src(bowerFiles.js)
+    .pipe(concat('lib.js'))
+    .pipe(gulp.dest(dir.scripts))
+    .pipe(uglify())
+    .pipe(rename('lib.min.js'))
+    .pipe(gulp.dest(dir.scripts));
+});
+
+
 // Task `pull-data`
 // pull any external data needed before
 // assembling html pages
@@ -123,11 +162,11 @@ gulp.task('watch', function () {
   // run `styles` task on css file changes in `./
   gulp.watch(path.join(dir.src, 'sass/**/*.{css,sass,scss}'), ['styles']);
 
-  // run `app` task on js file changes in './source/app'
-  gulp.watch(path.join(dir.src, 'app/**/*.js'), ['watch-test']);
-
   // run `icons` task on svg file changes in './source/svg'
   gulp.watch(path.join(dir.src, 'svg/**/*.svg'), ['icons']);
+
+  // run `app` task on js file changes in './source/app'
+  gulp.watch(path.join(dir.src, 'app/**/*'), ['scripts']);
 
   // run `app` task on js file changes in './source/app'
   gulp.watch(path.join(dir.src, '**/*.{json,html,hbs,handlebars}'), ['grunt-assemble']);
@@ -142,8 +181,8 @@ gulp.task('watch', function () {
 // runs blocks of build tasks in specific order 
 gulp.task('compile', function(done) {
   sequence(
-    ['empty', 'define-env'],
-    ['styles','icons'],
+    ['empty', 'sync', 'define-env'],
+    ['styles','scripts','icons'],
     'pages',
     done
   );
@@ -160,6 +199,9 @@ gulp.task('pages', function(done) {
 gulp.task('icons', function(done) {
   sequence('grunt-iconizr', 'post-iconizr', done);
 });
+
+gulp.task('sync', ['grunt-update_json']);
+gulp.task('scripts', ['lib', 'app']);
 
 gulp.task('develop', function(done) {
   sequence('compile', 'watch', done);
