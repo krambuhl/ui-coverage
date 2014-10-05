@@ -1,5 +1,8 @@
 var Coverage = {};
 
+//=include('modules/navigation.js');
+//=include('modules/content.js');
+
 Coverage.Application = Patchbay.View.extend({
   el: '.l-app',
   
@@ -9,7 +12,8 @@ Coverage.Application = Patchbay.View.extend({
   },
 
   setup: function() {
-
+    this.nav = Coverage.Navigation.create({ el: this.ui.nav }, { app: this });
+    this.content = Coverage.Content.create({ el: this.ui.content }, { app: this });
   }
 });
 
