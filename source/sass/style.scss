@@ -19,9 +19,11 @@
 @import "standard/slice";
 
 // custom stuff
-// @import "modules/";
+@import "modules/group";
+@import "modules/item";
+@import "modules/nav";
 
 // layouts / cells
-// @import "layouts/";
+@import "layouts/app";
 
 // state
