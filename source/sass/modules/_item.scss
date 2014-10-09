@@ -1,0 +1,33 @@
+.item {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+
+  padding: 10px 0 10px 0;
+  border-top: 1px dashed #ddd;
+}
+
+.item-title {
+  display: table-cell;
+  width: 200px;
+}
+
+.item-test {
+  display: table-cell;
+} 
+
+@include respond(0, 480px) {
+  .item {
+    display: block;
+  }
+
+  .item-title,
+  .item-test {
+    display: block;
+    width: auto;
+  }
+
+  .item-test {
+    margin-top: 5px;
+  }
+}

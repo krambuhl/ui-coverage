@@ -1,0 +1,49 @@
+.nav {
+  & > li {
+    margin-bottom: 15px;
+  }
+}
+
+.nav-title {
+  display: block;
+
+  text-transform: capitalize;
+  font-size: 500;
+
+  background: #ddd;
+  // border-bottom: 1px solid mix(#ddd, #eee);
+  padding: 5px 10px 7.5px 10px;
+  font-family: $fontstack-sans;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.nav-sub {
+  padding-top: 5px;
+  padding-left: 10px;
+
+  & > li {
+    margin-top: 4px;
+  }
+}
+
+.nav-item {
+
+}
+
+// <ul class="nav">
+//   <li><span class="nav-title">inputs</span>
+//     <ul class="nav-sub">
+//       <li><a href="#/inputs/text" class="nav-item">Input [text]</a></li>
+//       <li><a href="#/inputs/password" class="nav-item">Input [password]</a></li>
+//       <li><a href="#/inputs/email" class="nav-item">Input [email]</a></li>
+//     </ul>
+//   </li>
+//   <li><span class="nav-title">inputs</span>
+//     <ul class="nav-sub">
+//       <li><a href="#/inputs/text" class="nav-item">Input [text]</a></li>
+//       <li><a href="#/inputs/password" class="nav-item">Input [password]</a></li>
+//       <li><a href="#/inputs/email" class="nav-item">Input [email]</a></li>
+//     </ul>
+//   </li>
+// </ul>
